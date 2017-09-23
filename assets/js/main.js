@@ -209,12 +209,10 @@
         });
 
         //Call to action
-        $(window).resize(function() {
-            if( $(window).width() < 700) {
-                $('#btn_call_to').remove();
-                $('.call-to-action-2').append("<a href='tel:+48668689184' class='btn btn-primary'>+48668689184</a>");
-            } 
-        });
+        if( $(window).width() < 700) {
+            $('#btn_call_to').remove();
+            $('.call-to-action-2').append("<a href='tel:+48668689184' class='btn btn-primary'>+48668689184</a>");
+        }
 
         // Подключаем Popover
         $('[data-toggle="popover"]').popover({
