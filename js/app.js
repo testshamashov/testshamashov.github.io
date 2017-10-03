@@ -164,26 +164,29 @@ $(document).ready(function() {
 
 
 
+
+		
+
 		$(window).on("scroll", function() {
 			if (window.pageYOffset > 745) {
 				$('#m1').removeClass('active');
 			}
-      	var scro= $(window).scrollTop();            
-	        var scr=0;
-	        var scr2=745;
-	        var scr3=2975;
-	        var scr4=3675;
-	        var scr5=4680;
-	    if ( $(window).scrollTop() >= scr && scro <= scr2 ) {	$('#m1').addClass('active');}
-	     else $('#m1').removeClass('active');
-	  if ( scro > scr2 && scro <= scr3 ) { 	$('#m2').addClass('active');}
-	     else $('#m2').removeClass('active');
-	    if ( scro > scr3 && scro <= scr4 ) {   	$('#m3').addClass('active');}
-	     else $('#m3').removeClass('active');
-	  if ( scro > scr4 && scro <= scr5 ) {   	$('#m4').addClass('active');}
-	     else $('#m4').removeClass('active');
-	  if ( scro > scr5 ) {  	$('#m5').addClass('active');}
-	     else $('#m5').removeClass('active');
+	      	var scro= $(window).scrollTop();            
+		        var scr=0;
+		        var scr2=745;
+		        var scr3=2975;
+		        var scr4=3675;
+		        var scr5=4680;
+		    if ( $(window).scrollTop() >= scr && scro <= scr2 ) {	$('#m1').addClass('active');}
+		     	else $('#m1').removeClass('active');
+			if ( scro > scr2 && scro <= scr3 ) { 	$('#m2').addClass('active');}
+			    else $('#m2').removeClass('active');
+			if ( scro > scr3 && scro <= scr4 ) {   	$('#m3').addClass('active');}
+			    else $('#m3').removeClass('active');
+			if ( scro > scr4 && scro <= scr5 ) {   	$('#m4').addClass('active');}
+			    else $('#m4').removeClass('active');
+			if ( scro > scr5 ) {  	$('#m5').addClass('active');}
+			    else $('#m5').removeClass('active');
 	    });
 	    $("a.scrollto").click(function () {
 		var elementClick = $(this).attr("href")
