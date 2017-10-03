@@ -75,7 +75,10 @@ body {
     text-align: center;
     position: relative;
     outline: none;
-    transition: background-color, color .5s ease;
+    -webkit-transition: all .25s ease;
+     -moz-transition: all .25s ease;
+     -o-transition: all .25s ease;
+     transition: all .25s ease;
 }
 .button:hover {
 	background-color: #fff;
@@ -164,9 +167,17 @@ body {
 .navbar-toggle.active .icon-bar:nth-of-type(4) {
     background-color: transparent;
 }
-
-
-
+.nav.navbar-nav li a:hover,
+.nav.navbar-nav li a:focus,
+.nav.navbar-nav li a:active {
+	color: #e05206;
+}
+.nav.navbar-nav li a.active,
+.nav.navbar-nav li a.active:hover,
+.nav.navbar-nav li a.active:focus,
+.nav.navbar-nav li a.active:active {
+	color: #e05206;
+}
 .navbar-inverse .navbar-toggle:hover, 
 .navbar-inverse .navbar-toggle:focus, {
     background-color: transparent;
@@ -193,18 +204,12 @@ body {
 	font-size: 16px;
 	font-weight: 400;
 	text-transform: uppercase;
+	-webkit-transition: all .25s ease;
+     -moz-transition: all .25s ease;
+     -o-transition: all .25s ease;
+     transition: all .25s ease;
 }      
-.nav.navbar-nav li a:hover,
-.nav.navbar-nav li a:focus,
-.nav.navbar-nav li a:active {
-	color: #e05206;
-}
-.nav.navbar-nav li a.active,
-.nav.navbar-nav li a.active:hover,
-.nav.navbar-nav li a.active:focus,
-.nav.navbar-nav li a.active:active {
-	color: #e05206;
-}
+
 .vertical-line {
 	position: absolute;
 	top: 50%;
@@ -246,6 +251,7 @@ body {
 .tr-circle .grey-buble p {
 	font-size: 16px;
 	font-weight: 400;
+	line-height: 16px;
 	color: #000;
 	padding: 15px;
     margin: 0;
@@ -635,7 +641,54 @@ body {
 }	
 .close:after {
 	transform: rotate(-45deg);
-	}
+}
+
+.map-popup {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+    background: #fff;
+    width: 370px;
+    min-width: unset;
+    max-width: none;
+    margin: 0px;
+    padding: 10px 10px 20px;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: uppercase;
+    z-index: 2;
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -khtml-border-radius: 0px;
+    text-align: left;
+}
+div.magaz_marg {
+    margin: 0px 10px 0px 10px;
+}
+.map-popup .close {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+.map-popup .close:before {
+	width: 20px;
+	height: 4px;
+}
+.map-popup .close:after {
+	width: 20px;
+	height: 4px;
+}
+.close:hover:before,
+.close:hover:after {
+	background-color: #e95f0e;
+}
+.map-popup h3 {
+    font-size: 24px;
+    color: #e95f0e;
+}
 
 
 /*--------------------------------------adaptation-----------------------------------*/
@@ -691,7 +744,13 @@ body {
 	border-radius: 4px;
 	z-index: 20;
 	background-color: transparent;
-	transition: background .25s easy;
+	-webkit-transition: all .25s ease;
+     -moz-transition: all .25s ease;
+     -o-transition: all .25s ease;
+     transition: all .25s ease;
+}
+.play-hover {
+	background-color: #f67b00;
 }
 .overlay:hover {
 	cursor: pointer;
@@ -720,6 +779,7 @@ body {
 	font-weight: 900;
 	text-transform: uppercase;
 	letter-spacing: 0.45px;
+	transition: background-color .5s easy;
 }
 .oil-text .adaptation-button:focus, 
 .oil-text .adaptation-button:hover {
@@ -1088,6 +1148,7 @@ body {
 		max-width: 380px;
 		color: #fff;
 		background-color: #f67b00;
+		margin-bottom: 40px;
 	}
 	.map-second-line .pay-block {
 		position: fixed;
@@ -1099,6 +1160,7 @@ body {
 		display: none;
 		overflow-y: scroll;
     	height: 100%;
+    	opacity: .99;
 	}
 	.map-second-line .pay-block-top-line {
 		position: fixed;
@@ -1162,10 +1224,10 @@ body {
 	    bottom: 0px;
 	    content: '';
 	    display: block;
-	    background-image: url(../images/overlay-mobile.png);
+	    background-image: url('../images/over.png');
 	    background-size: cover;
 	    background-repeat: no-repeat;
-	    background-position: -2px 0;
+	    background-position: -2px -2px;
 	    pointer-events: all;
 	}
 	.play {
@@ -1472,3 +1534,5 @@ body {
 		}
 
 	}
+
+
