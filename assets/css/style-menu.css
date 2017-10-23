@@ -622,13 +622,13 @@
 .fancybox-button--close:hover {
   background-color: #000;
 }
-.fancybox-slide--iframe .fancybox-content {
+/* .fancybox-slide--iframe .fancybox-content {
   width  : 900px;
   height : 600px;
   max-width  : 90%;
   max-height : 50%;
   margin: 0;
-}
+} */
 /* .banner-video {
   height: 0;
   position: relative;
@@ -1322,11 +1322,11 @@ a.hidemore {
   .qb-btn-text {
     line-height: 60px;
   }
-  .fancybox-content {
+  /* .fancybox-content {
     width: 90%;
     padding: 5px;
     height: calc(75% - 200px);
-  }
+  } */
 
 }
 

@@ -94,6 +94,39 @@ $(document).ready(function() {
 		focus : true,
 		// Закрывать при клике по свободной области за пределами
 		closeClickOutside : true,
+		afterLoad : function( instance, current ) {
+
+    	// Remove scrollbars and change background
+    	current.$content.css({
+			overflow   : 'visible',
+	      background : '#000'
+			});	    
+	    },
+	  onUpdate : function( instance, current ) {
+	    var width,
+	        height,
+	        ratio = 16 / 9,
+	        video = current.$content;
+	    
+	    if ( video ) {
+	      video.hide();
+
+	      width  = current.$slide.width();
+	      height = current.$slide.height() - 100;
+	      
+	      if ( height * ratio > width ) {
+	        height = width / ratio;
+	      } else {
+	        width = height * ratio;
+	      }
+
+	      video.css({
+	        width  : width,
+	        height : height
+	      }).show();
+
+	    }
+	  },
 		// Обратная связь
 		beforeLoad   : $.noop,
 		afterLoad    : $.noop,
