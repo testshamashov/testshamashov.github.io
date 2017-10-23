@@ -600,12 +600,12 @@
   background: #f9f9f9;
 }
 .fancybox-content {
-  width: 55%;
+  width: 60%;
   padding: 15px;
   border-radius: 4px;
   overflow: visible;
-  margin: 100px auto;
-  height: calc(100% - 200px);
+  margin: 44px auto;
+  /* height: calc(100% - 200px); */
 }
 .fancybox-button--close {
   float: none;
@@ -622,11 +622,11 @@
 .fancybox-button--close:hover {
   background-color: #000;
 }
-/* .banner-video {
+.banner-video {
   height: 0;
   position: relative;
   padding-bottom: 56.25%;
-  padding-top: 60px;
+  /* padding-top: 60px; */
   overflow: hidden;
   border: none;
 }
@@ -637,7 +637,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-} */
+}
 
 /*----------------------------------video---------------------------*/
 /* iframe {
@@ -1178,9 +1178,9 @@ a.hidemore {
 
 @media only screen and (max-width : 768px) {
 .fancybox-content {
-    width: 70%;
+    width: 90%;
     padding: 5px;
-    height: calc(85% - 200px);
+    height: calc(85% - 88px);
   }
 }  
 

@@ -7,7 +7,7 @@ $(document).ready(function() {
 		// Скорость появления/угасания прозрачности элементов
 		opacity : 'auto',
 		// Отступы вокруг картинок (Игнорируется, если ширина окна менее 800px)
-		margin : [100, 0],
+		margin : [44, 0],
 		// Горизонтальный отступ между слайдами
 		gutter : 30,
 		// Панели управления
@@ -44,7 +44,7 @@ $(document).ready(function() {
 		// Контент в айфрейме
 		iframe : {
 		// Щаблон iframe
-		tpl : '<iframe id="fancybox-frame{rnd}" name="fancybox-frame{rnd}" class="fancybox-iframe" frameborder="0" vspace="0" hspace="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen allowtransparency="true" src=""></iframe>' + 
+		tpl : '<div class="video"><iframe id="fancybox-frame{rnd}" name="fancybox-frame{rnd}" class="fancybox-iframe" frameborder="0" vspace="0" hspace="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen allowtransparency="true" src=""></iframe></div>' + 
 		'<div class="fancybox-buttons">' +
 		'<button data-fancybox-close class="fancybox-button fancybox-button--close" title="Close (Esc)"></button>' +
 		'</div>',
