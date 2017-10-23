@@ -111,7 +111,7 @@ $(document).ready(function() {
 	    if ( video ) {
 	      video.hide();
 
-	      width  = current.$slide.width() - 10;
+	      width  = current.$slide.width() - 20;
 	      height = current.$slide.height() - 100;
 	      
 	      if ( height * ratio > width ) {
