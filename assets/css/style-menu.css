@@ -622,6 +622,13 @@
 .fancybox-button--close:hover {
   background-color: #000;
 }
+.fancybox-slide--iframe .fancybox-content {
+  width  : 800px;
+  height : 600px;
+  max-width  : 90%;
+  max-height : 60%;
+  margin: 0;
+}
 /* .banner-video {
   height: 0;
   position: relative;

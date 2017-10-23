@@ -25,7 +25,7 @@ $(document).ready(function() {
 		// Картинки
 		image : {
 		// Ожидать ли полной загрузки картинки перед показом
-		preload : "auto",
+		preload : false,
 		// Защитить картинки от скачивания правым кликом
 		protect : false
 		},
