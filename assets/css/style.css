@@ -192,6 +192,9 @@ hr {
   transition: all 0.3s;
   outline: none; }
 
+.btn:active{
+  outline: none !important;
+}
 .btn:focus {
   outline: none !important;
 }
@@ -549,7 +552,8 @@ blockquote {
   .navbar-default .navbar-collapse {
     background: #222; } }
 .banner {
-  padding: 300px 0 200px 0; }
+  padding: 220px 0 200px 0; 
+}
   .banner h1 {
     font-size: 70px;
     line-height: 70px;

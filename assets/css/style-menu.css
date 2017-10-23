@@ -568,6 +568,18 @@
 #hero-banner {
   height: 100vh;
 }
+.banner {
+  height: 100vh;
+}
+.banner h1 span {
+  color:  #fed156;
+}
+.btn-video {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .video-bg #customElement:before {
   display: block;
   position: absolute;
@@ -1274,6 +1286,12 @@ a.hidemore {
   }
   .footer-sitemap-nav ul {
     width: 100%;
+  }
+  #hero-banner {
+    margin-top: -74px;
+  }
+  .qb-btn-text {
+    line-height: 60px;
   }
 
 }
