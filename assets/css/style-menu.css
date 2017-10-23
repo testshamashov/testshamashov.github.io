@@ -568,6 +568,31 @@
 #hero-banner {
   height: 100vh;
 }
+.fancybox-slide--video .fancybox-content, 
+.fancybox-slide--video .fancybox-iframe {
+  background: #f9f9f9;
+}
+.fancybox-content {
+  width: 60%;
+  padding: 15px;
+  border-radius: 4px;
+  overflow: visible;
+}
+.fancybox-button--close {
+  float: none;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  display: block;
+  top: -15px;
+  right: -15px;
+  background-color: #000;
+}
+.fancybox-button--close:hover {
+  background-color: #000;
+}
 
 /*----------------------------------video---------------------------*/
 /* iframe {
