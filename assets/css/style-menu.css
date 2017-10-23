@@ -568,6 +568,21 @@
 #hero-banner {
   height: 100vh;
 }
+.video-bg #customElement:before {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+#hero-banner .banner {
+  position: relative;
+  z-index: 3;
+}
 .fancybox-slide--video .fancybox-content, 
 .fancybox-slide--video .fancybox-iframe {
   background: #f9f9f9;
@@ -577,6 +592,8 @@
   padding: 15px;
   border-radius: 4px;
   overflow: visible;
+  margin: 100px auto;
+  height: calc(100% - 200px);
 }
 .fancybox-button--close {
   float: none;
