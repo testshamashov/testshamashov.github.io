@@ -115,9 +115,9 @@ $(document).ready(function() {
 	      height = current.$slide.height() - 100;
 	      
 	      if ( height * ratio > width ) {
-	        height = width / ratio;
+	        height = width / ratio - 30;
 	      } else {
-	        width = height * ratio;
+	        width = height * ratio - 30;
 	      }
 
 	      video.css({
