@@ -1270,7 +1270,6 @@ a.hidemore {
   .site-develop {
     width: 100%;
     text-align: center;
-    /* padding-left: 55px; */
   }
   .tp-caption.tp-resizeme {
     font-size: 66px;
@@ -1292,6 +1291,11 @@ a.hidemore {
   }
   .qb-btn-text {
     line-height: 60px;
+  }
+  .fancybox-content {
+    width: 90%;
+    padding: 5px;
+    height: calc(75% - 200px);
   }
 
 }
