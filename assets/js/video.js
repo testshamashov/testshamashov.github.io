@@ -115,7 +115,7 @@ $(document).ready(function() {
 	      height = current.$slide.height() - 100;
 	      
 	      if ( height * ratio > width ) {
-	        height = width / ratio - 130;
+	        height = width / ratio;
 	      } else {
 	        width = height * ratio - 130;
 	      }
