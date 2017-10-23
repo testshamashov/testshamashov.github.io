@@ -1157,8 +1157,14 @@ a.hidemore {
     border-left: none;
     border-right: none;
   }
+  .fancybox-content {
+    width: 90%;
+    padding: 5px;
+    height: calc(75% - 200px);
+  }
 }
 
+  
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px) {
