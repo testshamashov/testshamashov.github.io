@@ -1,0 +1,328 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html
+	font-size: 16px
+
+body
+	font-size: 1rem
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+/*======================== Alert =========================*/
+
+.alert
+	min-height: 50px
+	border: none
+	border-radius: 0
+	margin-bottom: 0
+.alert-warning
+	background-color: #0066a1
+	color: #fff
+	font-size: 0.875rem
+	font-weight: 900
+
+.alert-dismissible
+	padding-right: 1.25rem
+
+.alert-dismissible .close
+  top: 50%
+  right: 15%
+  transform: translateY(-50%)
+  padding: 0
+  background: transparent
+  border: 1px solid white
+  border-radius: 50%
+  line-height: 1
+.alert-dismissible .close
+	width: 23px
+	height: 23px
+	display: flex
+	justify-content: center
+	span
+		font-size: 1rem
+		font-weight: 500
+
+/*====================  End of Alert  ====================*/
+
+
+/*======================== NAvbar =========================*/
+.navbar-top
+	background-color: #fff
+	position: relative
+	z-index: 1
+.navbar
+	background-color: #fff
+	padding: 1rem 1rem
+
+.navbar-collapse
+	position: relative
+	margin-left: 15px
+
+.navbar-brand
+	margin-left: -41px
+	margin-top: -17px
+	margin-bottom: -37px
+
+.lang
+	display: flex
+	align-items: center
+	justify-content: space-between
+	margin-left: 28px
+	a.active
+		color: $accent
+		font-weight: 900
+	span
+		color: #bbb
+		opacity: .5
+
+.nav-item
+	position: relative
+
+.navbar-light .navbar-nav .nav-link
+	color: #292929
+	font-size: 0.8125rem
+	font-weight: 700
+	text-transform: uppercase
+
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link
+	color: $accent
+	font-weight: 900
+
+.nav-item.bor-bot.active a::before
+	content: ''
+	display: block
+	height: 2px
+	width: 70%
+	background-color: $accent
+	position: absolute
+	bottom: 5px
+
+.nav-item a::before
+	content: ''
+	display: block
+	height: 2px
+	width: 0%
+	background-color: $accent
+	position: absolute
+	bottom: 5px
+	transition: width .5s ease
+
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:active,
+	color: $accent
+
+.nav-item.bor-bot a:hover::before,
+.nav-item.bor-bot a:focus::before,
+.nav-item.bor-bot a:active::before
+	width: 70%
+
+.btn-search
+	background-color: transparent
+	border: none
+	
+
+/*====================  End of NAvbar  ====================*/
+
+/*======================== Search show =========================*/
+
+.form-inline .form-control.search-show.active
+  position: absolute
+  width: 50px
+  bottom: -150%
+  right: 0
+  display: block !important
+  transition: width 1s ease
+
+/*====================  End of Search show  ====================*/
+
+
+
+
+/*======================== Hero =========================*/
+.hero
+	height: 1000vh
+
+
+
+/*====================  End of Hero  ====================*/
+
+
+
+/*======================== Carousel =========================*/
+.carousel
+	margin-top: -75px
+
+.carousel-item
+	padding-top: 99px
+	padding-bottom: 90px
+	background-size: cover
+	background-position: center
+
+.carousel-control-next,
+.carousel-control-prev
+	opacity: 1
+
+.carousel-indicators
+	bottom: 15px
+
+.carousel-indicators li
+	width: 12px
+	height: 12px
+	margin-right: 7px
+	margin-left: 7px
+	box-shadow: 0 0 18px 2px #000
+	border: 2px solid #fff
+	border-radius: 50%
+	background-color: transparent
+
+.hero-subtitle
+	color: #fff
+	font-family: $second-font
+	font-size: 1.375rem
+	font-weight: 400
+	line-height: 15.94px
+	text-align: center
+	margin-bottom: 65px
+
+.carousel-caption
+	position: relative
+	right: initial
+	left: initial
+	bottom: initial
+	box-shadow: 0 10px 17px 3px rgba(0, 0, 0, 0.1)
+	background-color: #fff
+	border-radius: 4px
+	padding: 25px 20px 40px
+	width: 666px
+	display: block
+	margin: 0 auto
+
+.carousel-caption
+	span
+		color: $orange
+		font-size: 0.8125rem
+		font-weight: 900
+		line-height: 42.84px
+		text-transform: uppercase
+		letter-spacing: 2.59px
+		position: relative
+
+.carousel-caption span::before,
+.carousel-caption span::after
+	content: ''
+	position: absolute
+	top: 50%
+	height: 2px
+	width: 20px
+	display: block
+	background-color: $orange
+	transform: translateY(-50%)
+
+.carousel-caption span::before
+	right: -27px
+
+.carousel-caption span::after
+	left: -27px
+
+.hero-title
+	color: #282828
+	font-family: $second-font
+	font-size: 2.125rem
+	font-weight: 400
+	font-style: italic
+	line-height: 42px
+	margin-bottom: 1.4375rem
+
+.btn-warning
+  color: #fff
+  background-color: $orange
+  border-color: $orange
+  font-size: 0.75rem
+  font-weight: 900
+  line-height: 1
+  letter-spacing: 2.64px
+  text-transform: uppercase
+  padding: 17px 30px
+
+
+
+
+
+
+/*====================  End of Carousel  ====================*/
+
+
+
+
+
+/*======================== Sprite =========================*/
+
+.search, .arrow-left, .arrow-right
+	display: inline-block
+	background: url('../img/sprite.png') no-repeat
+	overflow: hidden
+	text-indent: -9999px
+	text-align: left
+
+ 
+.search
+	background-position: -0px -0px
+	width: 24px
+	height: 24px
+
+.arrow-left
+	background-position: -0px -24px
+	width: 17px
+	height: 27px
+	margin-top: 48px
+	margin-left: -60px
+
+.arrow-right
+	background-position: -0px -51px
+	width: 17px
+	height: 27px
+	margin-top: 48px
+	margin-right: -60px
+
+/*====================  End of Sprite  ====================*/
+
+
+@import "media" // Always at the end
