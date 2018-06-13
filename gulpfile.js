@@ -10,6 +10,8 @@ var gulp          = require('gulp'),
 		rename        = require('gulp-rename'),
 		autoprefixer  = require('gulp-autoprefixer'),
 		notify        = require("gulp-notify"),
+		del           = require('del'),
+		imagemin      = require('gulp-imagemin'),
 		rsync         = require('gulp-rsync');
 
 gulp.task('browser-sync', function() {
@@ -47,6 +49,33 @@ gulp.task('js', function() {
 	.pipe(browserSync.reload({ stream: true }))
 });
 
+gulp.task('imagemin', function() {
+	return gulp.src('app/img/**/*')
+	.pipe(imagemin())
+	.pipe(gulp.dest('dist/img')); 
+});
+
+gulp.task('build', ['removedist', 'imagemin', 'styles', 'js'], function() {
+
+	var buildFiles = gulp.src([
+		'app/*.html',
+		'app/.htaccess',
+		]).pipe(gulp.dest('dist'));
+
+	var buildCss = gulp.src([
+		'app/css/main.min.css',
+		]).pipe(gulp.dest('dist/css'));
+
+	var buildJs = gulp.src([
+		'app/js/scripts.min.js',
+		]).pipe(gulp.dest('dist/js'));
+
+	var buildFonts = gulp.src([
+		'app/fonts/**/*',
+		]).pipe(gulp.dest('dist/fonts'));
+
+});
+
 gulp.task('rsync', function() {
 	return gulp.src('app/**')
 	.pipe(rsync({
@@ -68,4 +97,5 @@ gulp.task('watch', ['styles', 'js', 'browser-sync'], function() {
 	gulp.watch('app/*.html', browserSync.reload)
 });
 
+gulp.task('removedist', function() { return del.sync('dist'); });
 gulp.task('default', ['watch']);
