@@ -1,9 +1,6 @@
 @import "vars"
 
 
-/*==========  Desktop First  ==========*/
-
-// ≥1200px
 +media-breakpoint-down(lg)
 	html
 		font-size: 14px
@@ -15,11 +12,6 @@
 	.navbar-brand
 		margin-left: -15px
 
-	.navbar-light
-		.navbar-nav
-			.nav-link
-				// font-size: 11px
-
 	.carousel
 		margin-top: 0
 
@@ -27,16 +19,11 @@
 		padding-top: 24px
 
 
-// ≥992px
 +media-breakpoint-down(md)
-	.alert-warning
-		// font-size: 12px
 
 	.alert-dismissible
 		.close
 			right: 0
-	.navbar-toggler
-		// border: 2px solid $orange
 
 	button:focus
 		outline: none
@@ -55,21 +42,13 @@
 		margin-left: 0
 		justify-content: space-evenly
 
-	.hero-title
-		// font-size: 20px
-		// line-height: 1.4
-
 	.btn-warning
     padding: 10px 20px
 
 	.carousel-indicators
     bottom: 0
 
-	
 
-
-
-// ≥768px
 +media-breakpoint-down(sm)
 	.navbar-brand
     margin-left: 0
@@ -88,28 +67,13 @@
   	line-height: 1.4
 	
 
-// ≥576px
+
 +media-breakpoint-down(xs)
 	.carousel-control-next,
 	.carousel-control-prev
 		display: none
 
 
-/*==========  Mobile First  ==========*/
-
-// ≤576px
-+media-breakpoint-up(sm)
-
-// ≤768px
-+media-breakpoint-up(md)
-	
-
-// ≤992px
-+media-breakpoint-up(lg)
-	
-
-
-// ≤1280px
 +media-breakpoint-up(xl)
 	.navbar-expand-lg
 		.navbar-nav
