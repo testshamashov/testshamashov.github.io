@@ -20,9 +20,7 @@
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
-    "del": "^3.0.0",
-  },
-  "dependencies": {
+    "gulp-imagemin": "^4.1.0",
     "del": "^3.0.0",
   }
 }
